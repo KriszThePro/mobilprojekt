@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "841896547034",
+    "firebase_url": "https://mobilprojekt-55771-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "mobilprojekt-55771",
+    "storage_bucket": "mobilprojekt-55771.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841896547034:android:8c64a38bb2fc123288cbe3",
+        "android_client_info": {
+          "package_name": "hu.szollosikrisztian.mobilprojekt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW-N-PXE7jLJQ0gNp8eIoI9ArHGmVeHyM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
