@@ -2,4 +2,16 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="android_green">#6ec03d</color>
+    <color name="chat_bubble_blue">#3b8cd6</color>
+
+    <color name="background_dark">#FF121212</color>
+    <color name="light_gray_dark">#FF2C2C2C</color>
+    <color name="medium_gray_dark">#FF5F6368</color>
+    <color name="text_primary_dark">#FFE8EAED</color>
+
+    <color name="success_green_dark">#FF34A853</color>
+    <color name="error_red_dark">#FFEA4335</color>
+    <color name="soft_yellow_dark">#FFFBBC05</color>
 </resources>
