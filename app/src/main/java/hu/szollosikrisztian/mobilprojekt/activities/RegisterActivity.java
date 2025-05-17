@@ -20,26 +20,26 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.Objects;
 
 import hu.szollosikrisztian.mobilprojekt.R;
-import hu.szollosikrisztian.mobilprojekt.util.IntentUtil;
+import hu.szollosikrisztian.mobilprojekt.utils.IntentUtil;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private EditText mEmailInput;
-    private EditText mUsernameInput;
-    private EditText mPasswordInput;
-    private EditText mConfirmPasswordInput;
-    private Button mRegisterButton;
-    private Button mLoginButton;
-    private ProgressBar mProgressBar;
+    private EditText emailInputField;
+    private EditText usernameInputField;
+    private EditText passwordInputField;
+    private EditText confirmPasswordInputField;
+    private Button registerButton;
+    private Button loginButton;
+    private ProgressBar progressBar;
 
     private void initializeActivityComponents() {
-        mEmailInput = findViewById(R.id.email_input);
-        mUsernameInput = findViewById(R.id.username_input);
-        mPasswordInput = findViewById(R.id.password_input);
-        mConfirmPasswordInput = findViewById(R.id.password_again_input);
-        mRegisterButton = findViewById(R.id.register_button);
-        mLoginButton = findViewById(R.id.login_button);
-        mProgressBar = findViewById(R.id.progress_bar);
+        this.emailInputField = findViewById(R.id.email_input);
+        this.usernameInputField = findViewById(R.id.username_input);
+        this.passwordInputField = findViewById(R.id.password_input);
+        this.confirmPasswordInputField = findViewById(R.id.password_again_input);
+        this.registerButton = findViewById(R.id.register_button);
+        this.loginButton = findViewById(R.id.login_button);
+        this.progressBar = findViewById(R.id.progress_bar);
     }
 
     private void navigateToLogin() {
@@ -67,27 +67,27 @@ public class RegisterActivity extends AppCompatActivity {
     private void handleRegister() {
         FirebaseAuth auth = FirebaseAuth.getInstance();
 
-        mProgressBar.setVisibility(View.VISIBLE);
-        String email = mEmailInput.getText().toString();
-        String username = mUsernameInput.getText().toString();
-        String password = mPasswordInput.getText().toString();
-        String confirmPassword = mConfirmPasswordInput.getText().toString();
+        this.progressBar.setVisibility(View.VISIBLE);
+        String email = this.emailInputField.getText().toString();
+        String username = this.usernameInputField.getText().toString();
+        String password = this.passwordInputField.getText().toString();
+        String confirmPassword = this.confirmPasswordInputField.getText().toString();
 
         if (email.isEmpty() || username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-            mProgressBar.setVisibility(View.GONE);
+            this.progressBar.setVisibility(View.GONE);
             Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
             return;
         }
 
         if (!password.equals(confirmPassword)) {
-            mProgressBar.setVisibility(View.GONE);
+            this.progressBar.setVisibility(View.GONE);
             Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show();
             return;
         }
 
         auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(task -> {
-                    mProgressBar.setVisibility(View.GONE);
+                    this.progressBar.setVisibility(View.GONE);
 
                     if (!task.isSuccessful()) {
                         Toast.makeText(this, "Registration failed: " + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_LONG).show();
@@ -100,11 +100,11 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void setupRegisterButtonClickHandler() {
-        mRegisterButton.setOnClickListener(v -> handleRegister());
+        this.registerButton.setOnClickListener(v -> handleRegister());
     }
 
     private void setupLoginButtonClickHandler() {
-        mLoginButton.setOnClickListener(v -> navigateToLogin());
+        this.loginButton.setOnClickListener(v -> navigateToLogin());
     }
 
     @Override

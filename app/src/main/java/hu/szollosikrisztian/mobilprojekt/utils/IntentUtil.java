@@ -1,4 +1,4 @@
-package hu.szollosikrisztian.mobilprojekt.util;
+package hu.szollosikrisztian.mobilprojekt.utils;
 
 import android.content.Intent;
 

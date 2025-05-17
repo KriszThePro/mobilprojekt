@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.Objects;
 
 import hu.szollosikrisztian.mobilprojekt.R;
-import hu.szollosikrisztian.mobilprojekt.util.IntentUtil;
+import hu.szollosikrisztian.mobilprojekt.utils.IntentUtil;
 
 public class ChatsActivity extends AppCompatActivity {
 
