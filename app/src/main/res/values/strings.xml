@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MobilProjekt</string>
+    <string name="app_name">Social Chat</string>
 
     <string name="email_address">Email Address</string>
     <string name="password">Password</string>
@@ -15,4 +15,13 @@
     <string name="username">Username</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="type_message">Message</string>
+    <string name="send">Send</string>
+    <string name="message">Message</string>
+    <string name="profile">Profile</string>
+    <string name="pick_image">Pick an image</string>
+    <string name="clear_image">Clear image</string>
+    <string name="edit_username">Edit Username</string>
+    <string name="save">Save</string>
+    <string name="camera">Camera</string>
 </resources>
